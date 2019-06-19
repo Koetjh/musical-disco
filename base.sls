@@ -15,7 +15,7 @@ base:
 
 /etc/munin/munin-node.conf:
   file.append:
-   - text: 'Allow ^10\.2\.4\.25$'
+   - text: 'allow ^10\.2\.4\.25$'
 
 /etc/rsyslog.conf:
   file.append:
