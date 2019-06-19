@@ -1,0 +1,11 @@
+#cloud-config
+runcmd:
+ - [ wget -O - "https://repo.saltstack.com/apt/ubuntu/18.04/amd64/latest/SALTSTACK-GPG-KEY.pub" | apt-key add - ]
+ - [ echo "deb http://repo.saltstack.com/apt/ubuntu/18.04/amd64/latest bionic main" | tee -a /etc/apt/sources.list ]
+ - [ echo 10.2.4.25 salt >> /etc/hosts ]
+ - [ apt-get update -y ]
+ - [ apt-get upgrade -y ]
+ - [ apt-get install salt-minion ]
+ - [ salt-minion -d ]
+
+
