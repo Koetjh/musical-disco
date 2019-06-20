@@ -8,11 +8,11 @@ apt-get upgrade -y
 apt-get install -y apt-transport-https ca-certificates curl software-properties-common git
 apt-get install -y apache2 munin rsyslog docker-ce salt-master
 git clone https://github.com/Koetjh/musical-disco
-cp -rf ~/musical-disco/munin.conf /etc/munin/
-cp -rf ~/musical-disco/apache24.conf /etc/munin/
-cp -rf ~/musical-disco/rsyslog.conf /etc/
-cp -rf ~/musical-disco/master.conf /etc/salt/master.d/
-mv ~/musical-disco/base.sls /srv/salt/
+cp -rf /musical-disco/munin.conf /etc/munin/
+cp -rf /musical-disco/apache24.conf /etc/munin/
+cp -rf /musical-disco/rsyslog.conf /etc/
+cp -rf /musical-disco/master.conf /etc/salt/master.d/
+mv /musical-disco/base.sls /srv/salt/
 mkdir /var/www/munin
 chown munin:munin /var/www/munin
 
