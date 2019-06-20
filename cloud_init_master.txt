@@ -1,0 +1,3 @@
+#cloud-config
+ runcmd:
+  -  'curl https://raw.githubusercontent.com/Koetjh/musical-disco/master/master_config.sh | /bin/bash -s'
