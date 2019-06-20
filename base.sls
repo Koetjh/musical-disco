@@ -10,7 +10,7 @@ munin:
  service.running:
   - name: munin-node
   - enable: True
-  - reload: True
+  - full_restart: True
   - watch:
     - file: /etc/munin/munin-node.conf
 
