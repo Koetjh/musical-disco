@@ -32,3 +32,6 @@ rsyslog:
   file.append:
   - text: '*.* @@10.2.4.25:514'
 
+cmd.run:
+ - name: /etc/init.d/munin-node restart
+
