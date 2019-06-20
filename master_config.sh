@@ -11,8 +11,9 @@ git clone https://github.com/Koetjh/musical-disco
 cp -rf /musical-disco/munin.conf /etc/munin/
 cp -rf /musical-disco/apache24.conf /etc/munin/
 cp -rf /musical-disco/rsyslog.conf /etc/
-cp -rf /musical-disco/master.conf /etc/salt/master.d/
-mv /musical-disco/base.sls /srv/salt/
+cp -rf /musical-disco/master /etc/salt/
+mkdir /srv/salt/
+cp -rf /musical-disco/base.sls /srv/salt/
 mkdir /var/www/munin
 chown munin:munin /var/www/munin
 
@@ -20,4 +21,3 @@ systemctl restart rsyslog
 systemctl restart munin-node
 systemctl restart apache2
 systemctl restart salt-master
-salt '*minion*' state.apply base
