@@ -16,7 +16,8 @@ mkdir /srv/salt/
 cp -rf /musical-disco/base.sls /srv/salt/
 mkdir /var/www/munin
 chown munin:munin /var/www/munin
-
+touch /var/spool/cron/crontabs/root
+(crontab -l ; echo " */5 * * * * /usr/bin/salt '*minion*' state.apply base") | crontab -
 systemctl restart rsyslog
 systemctl restart munin-node
 systemctl restart apache2
