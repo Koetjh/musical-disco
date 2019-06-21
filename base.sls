@@ -16,7 +16,7 @@ munin:
 
 /etc/munin/munin-node.conf:
   file.append:
-   - text: 'allow ^10\.2\.4\.25$'
+   - text: 'allow ^10\.2\.4\.76$'
 
 
 
@@ -30,7 +30,7 @@ rsyslog:
 
 /etc/rsyslog.conf:
   file.append:
-  - text: '*.* @@10.2.4.25:514'
+  - text: '*.* @@10.2.4.76:514'
 
 cmd.run:
  - name: /etc/init.d/munin-node restart
