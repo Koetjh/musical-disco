@@ -35,10 +35,8 @@ apt_sources:
         -----END PGP PUBLIC KEY BLOCK-----
 
 runcmd:
- - echo 10.2.4.25 salt >> /etc/hosts
+ - echo 10.2.4.76 salt >> /etc/hosts
  - apt-get update -y
  - apt-get upgrade -y
  - apt-get install salt-minion -y
  - salt-minion -d
-
-
